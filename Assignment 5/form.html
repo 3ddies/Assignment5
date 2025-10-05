@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 4 - Form Validation</title>
+  <style>
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    .error {
+      color: red;
+    }
+    .warning {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registration Form</h1>
+
+  <form id="userForm" novalidate>
+    <!-- Username -->
+    <label for="username" id="label-username">Username:</label>
+    <input type="text" id="username" name="username">
+
+    <!-- Email -->
+    <label for="email" id="label-email">Email:</label>
+    <input type="text" id="email" name="email">
+
+    <!-- Phone Number -->
+    <label for="phone" id="label-phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" placeholder="(123)-456-7890">
+
+    <!-- Password -->
+    <label for="password" id="label-password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <!-- Confirm Password -->
+    <label for="confirmPassword" id="label-confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword">
+
+    <!-- Gender -->
+    <label id="label-gender">Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+
+    <!-- Age Group -->
+    <label for="age" id="label-age">Age Group:</label>
+    <select id="age" name="age">
+      <option value="">--Select--</option>
+      <option value="<21">&lt; 21 years old</option>
+      <option value="21-25">21 – 25 years old</option>
+      <option value="26-35">26 – 35 years old</option>
+      <option value="36-50">36 – 50 years old</option>
+      <option value="50+">50 years old</option>
+    </select>
+
+    <!-- Music Genre -->
+    <label id="label-music">Music Genre:</label>
+    <input type="checkbox" name="music" value="Pop"> Pop
+    <input type="checkbox" name="music" value="Hip-hop"> Hip-hop
+    <input type="checkbox" name="music" value="Jazz"> Jazz
+    <input type="checkbox" name="music" value="Rock"> Rock
+    <input type="checkbox" name="music" value="Classical"> Classical
+    <input type="checkbox" name="music" value="Country"> Country
+
+    <br><br>
+    <!-- Buttons -->
+    <button type="button" id="submitBtn">Submit</button>
+    <button type="reset" id="clearBtn">Clear</button>
+  </form>
+
+  <script src="validation.js"></script>
+</body>
+</html>
